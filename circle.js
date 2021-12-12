@@ -44,8 +44,8 @@ class Circle {
     push();
     translate(pos.x, pos.y);
     rotate(a);
-    fill(127);
-    stroke(200);
+    fill(200);
+    noStroke();
     strokeWeight(2);
 
     ellipse(0, 0, this.size * 2, this.size * 2);
