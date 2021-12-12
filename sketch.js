@@ -14,7 +14,14 @@ function setup() {
 }
 
 function draw() {
-  background(51);
+
+  let size = 0;
+
+  for (let i = polygons.length - 1; i >= 0; i--) {
+    size += polygons[i].size / 20;
+  }
+
+  background(color(170 - size, 180 - size, 230 - size));
 
   let timeStep = 1.0 / 30;
   world.Step(timeStep, 10, 10);
