@@ -1,14 +1,11 @@
-class Square {
+class Square extends Shape {
 
   constructor(x, y, size){
-    this.makeBody(x, y, size);
+    super(x, y, size);
   }
 
   makeBody(x, y, size) {
-
-    this.x = x;
-    this.y = y;
-    this.size = size;
+    super.makeBody(x, y, size);
 
     let bd = new box2d.b2BodyDef();
     bd.type = box2d.b2BodyType.b2_dynamicBody;
@@ -29,6 +26,7 @@ class Square {
   }
 
   display() {
+
     let pos = scaleToPixels(this.body.GetPosition());
     let a = this.body.GetAngleRadians();
 

@@ -1,14 +1,12 @@
-class Triangle {
+class Triangle extends Shape {
 
   constructor(x, y, size){
-    this.makeBody(x, y, size);
+    super(x, y, size);
   }
 
   makeBody(x, y, size) {
 
-    this.x = x;
-    this.y = y;
-    this.size = size;
+    super.makeBody(x, y, size);
 
     let bd = new box2d.b2BodyDef();
     bd.type = box2d.b2BodyType.b2_dynamicBody;
@@ -50,7 +48,7 @@ class Triangle {
     fill(220);
     noStroke();
     beginShape();
-    // For every vertex, convert to pixel vector
+
     for (let i = 0; i < ps.m_count; i++) {
       let v = scaleToPixels(ps.m_vertices[i]);
       vertex(v.x, v.y);
