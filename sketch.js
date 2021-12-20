@@ -36,6 +36,25 @@ function draw() {
 }
 
 function mousePressed() {
-  let cs = new Circle(mouseX, mouseY, random(15, 55));
-  polygons.push(cs);
+
+  let words = ['circle', 'square', 'triangle'];
+  let word = random(words);
+
+  if(word == 'circle')
+  {
+    let cs = new Circle(mouseX, mouseY, random(15, 55));
+    polygons.push(cs);
+  }
+
+  else if(word == 'square')
+  {
+    let cs = new Square(mouseX, mouseY, random(15, 55));
+    polygons.push(cs);
+  }
+
+  else if(word == 'triangle')
+  {
+    let cs = new Triangle(mouseX, mouseY, random(15, 55));
+    polygons.push(cs);
+  }
 }
