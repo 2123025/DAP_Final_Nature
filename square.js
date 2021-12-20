@@ -34,7 +34,7 @@ class Square extends Shape {
     push();
     translate(pos.x, pos.y);
     rotate(a);
-    fill(220);
+    fill(200);
     noStroke();
 
     rect(0, 0, this.size * 2 - 3 , this.size * 2 - 3);

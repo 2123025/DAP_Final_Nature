@@ -45,7 +45,7 @@ class Triangle extends Shape {
     push();
     translate(pos.x, pos.y);
     rotate(a);
-    fill(220);
+    fill(190);
     noStroke();
     beginShape();
 
